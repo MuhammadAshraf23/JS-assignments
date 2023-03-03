@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Chapter 9 to 11
+      Assignment 7 -->
+    <script>
+        //Q # 1
+        let city = prompt("city");
+        if (city == "Karachi") {
+            alert("Welcome to City of Lights");
+        }
+        else {
+            alert("nothing")
+        }
+
+
+        // Q # 2
+        let Gender = prompt("gender")
+        if (Gender == "male") {
+            alert("Welcome to Sir")
+        }
+        if (Gender == "female") {
+            alert("Welcome to Ma'am")
+        }
+
+
+        // Q # 3
+        let color = prompt("Enter the color:'Red,Green ,Yellow'")
+        if (color == "Red") {
+            alert("Must Stop")
+        }
+        else if (color == "Yellow") {
+            alert("Ready to move")
+        }
+        else if (color == "Green") {
+            alert("Move Now")
+        }
+        else {
+            alert("Please enter the correct color")
+        }
+
+        // Q # 4
+
+        let d = prompt("Enter Your car current fuel (in litres)")
+        if (d <= "0.25") {
+            alert("Please refill the fuel in your car")
+        }
+
+ //Q # 5
+ var a = 4;
+        if (++a === 5) {
+            alert("given condition for variable a is true");
+        }
+        var b = 82;
+        if (b++ === 83) {
+            alert("given condition for variable b is true");
+        } var c = 12;
+        if (c++ === 13) {
+            alert("condition 1 is true");
+        }
+        if (c === 13) {
+            alert("condition 2 is true");
+        }
+        if (++c < 14) {
+            alert("condition 3 is true");
+        }
+        if (c === 14) {
+            alert("condition 4 is true");
+        }
+        var materialCost = 20000;
+        var laborCost = 2000;
+        var totalCost = materialCost + laborCost;
+        if (totalCost === laborCost + materialCost) {
+            alert("The cost equals");
+        }
+        if (true) {
+            alert("True");
+        }
+        if (false) {
+            alert("False");
+        }
+
+        if ("car" < "cat") {
+            alert("car is smaller than cat");
+        }
+
+        //Q # 6
+        var t = prompt("Enter Your Total Marks:");
+        var o = prompt("Enter Your Obtained Marks:");
+        p = o / t * 100;
+        alert(p)
+        if (p >= 80) {
+            alert("GRADES\n A-one")
+            alert("Excellent")
+        }
+        else if (p >= 70) {
+            alert("GRADES\n A")
+            alert("Good")
+        }
+        else if (p >= 60) {
+            alert("GRADES\n B")
+            alert("Your need to improve")
+        }
+        else if (p <= 60) {
+            alert("GRADES\nFail")
+            alert("sorry")
+        }
+        //Q # 7
+        let snum = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        let snum2 = prompt("Enter a Number to guess from 1 to 10")
+        if (snum == snum2) {
+            alert("Bingo! Correct answer")
+        }
+
+
+        //     //Q # 8
+        let a = prompt("Enter a number which divisible by 3")
+
+        if (a % 3 == 0) {
+            alert("This number is divisible by 3")
+        }
+        else {
+            alert("It is not divisible by 3")
+        }
+        //Q # 9
+        let b = prompt("Enter a number to check Even or Odd")
+        if (b % 2 == 0) {
+            alert("This Number is Even")
+        }
+        else {
+            alert("This Number is Odd")
+        }
+
+        //Q # 10
+        let t = prompt("Enter temperature to check the weather")
+        if (t > 40) {
+            alert("It is too hot outside.")
+        }
+        else if (t > 30) {
+            alert("The Weahter today is Normal")
+        }
+        else if (t > 20) {
+            alert("Today's Weather is cool")
+        }
+        else if (t > 10) {
+            alert("OMG! Today's Weather is so cool")
+        }
+        //Q# 11
+        let fn = +prompt("Enter your first Number")
+        let sn = +prompt("Enter your second Number")
+        let op = prompt("Enter operators:(+,-,*,/,%)")
+        add = fn + sn;
+        sub = fn - sn;
+        multiply = fn * sn;
+        divide = fn / sn;
+        reminder = fn % sn;
+        if (op == '+') {
+            alert(add)
+        }
+        else if (op == '-') {
+            alert(sub)
+        }
+        else if (op == '*') {
+            alert(multiply)
+        }
+        else if (op == '/') {
+            alert(divide)
+        }
+        else if (op == '%') {
+            alert(reminder)
+        }
+
+
+    </script>
+</body>
+
+</html>

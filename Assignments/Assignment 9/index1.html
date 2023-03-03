@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Initialize an array with color names
+let colors = ["red", "green", "blue"];
+
+// Display the array elements in the browser
+document.write(`<p>Initial Array: [${colors.join(", ")}]</p>`);
+
+// Ask the user what color he/she wants to add to the beginning & add that color to the beginning of the array
+let colorToAddToBeginning = prompt("Enter a color to add to the beginning of the array:");
+colors.unshift(colorToAddToBeginning);
+
+// Display the updated array in the browser
+document.write(`<p>Array after adding ${colorToAddToBeginning} to the beginning: [${colors.join(", ")}]</p>`);
+
+// Ask the user what color he/she wants to add to the end & add that color to the end of the array
+let colorToAddToEnd = prompt("Enter a color to add to the end of the array:");
+colors.push(colorToAddToEnd);
+
+// Display the updated array in the browser
+document.write(`<p>Array after adding ${colorToAddToEnd} to the end: [${colors.join(", ")}]</p>`);
+
+// Add two more colors to the beginning of the array
+colors.unshift("yellow", "orange");
+
+// Display the updated array in the browser
+document.write(`<p>Array after adding yellow and orange to the beginning: [${colors.join(", ")}]</p>`);
+
+// Delete the first color in the array
+colors.shift();
+
+// Display the updated array in the browser
+document.write(`<p>Array after deleting the first color: [${colors.join(", ")}]</p>`);
+
+// Delete the last color in the array
+colors.pop();
+
+// Display the updated array in the browser
+document.write(`<p>Array after deleting the last color: [${colors.join(", ")}]</p>`);
+
+// Ask the user at which index he/she wants to add a color & color name. Then add the color to desired position/index
+let indexToAddColor = parseInt(prompt("Enter the index at which you want to add a color:"));
+let colorToAddAtIndex = prompt("Enter the color to add at the desired index:");
+colors.splice(indexToAddColor, 0, colorToAddAtIndex);
+
+// Display the updated array in the browser
+document.write(`<p>Array after adding ${colorToAddAtIndex} at index ${indexToAddColor}: [${colors.join(", ")}]</p>`);
+
+// Ask the user at which index he/she wants to delete color(s) & how many colors he/she wants to delete. Then remove the same number of color(s) from user-defined position/index.
+let indexToDeleteFrom = parseInt(prompt("Enter the index from which you want to delete color(s):"));
+let numberOfColorsToDelete = parseInt(prompt("Enter the number of colors you want to delete:"));
+colors.splice(indexToDeleteFrom, numberOfColorsToDelete);
+
+// Display the updated array in the browser
+document.write(`<p>Array after deleting ${numberOfColorsToDelete} color(s) from index ${indexToDeleteFrom}: [${colors.join(", ")}]</p>`);
+
+    </script>
+</body>
+</html>

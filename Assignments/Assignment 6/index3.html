@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+           //Q # 6
+let subject1 = prompt("Enter subject 1 name: ");
+let subject2 = prompt("Enter subject 2 name: ");
+let subject3 = prompt("Enter subject 3 name: ");
+
+// Total marks for each subject
+const totalMarks = 100;
+
+// Take input for obtained marks
+let obtainedMarks1 = parseInt(prompt(`Enter obtained marks for ${subject1}: `));
+let obtainedMarks2 = parseInt(prompt(`Enter obtained marks for ${subject2}: `));
+let obtainedMarks3 = parseInt(prompt(`Enter obtained marks for ${subject3}: `));
+
+// Calculate total marks and percentage
+let totalObtainedMarks = obtainedMarks1 + obtainedMarks2 + obtainedMarks3;
+let percentage1 = (obtainedMarks1 / (totalMarks)) * 100;
+let percentage2 = (obtainedMarks2 / (totalMarks)) * 100;
+let percentage3 = (obtainedMarks3 / (totalMarks)) * 100;
+let percentage = (totalObtainedMarks / (totalMarks * 3)) * 100;
+
+// Print the results in HTML table format
+document.write("<table>");
+document.write(`<tr><th>Subject</th><th>Total Marks</th><th>Obtained Marks</th><th>percentage</th></tr>`);
+document.write(`<tr><td>${subject1}</td><td>${totalMarks}</td><td>${obtainedMarks1}</td><td>${percentage1.toFixed(2)}%</td></tr>`);
+document.write(`<tr><td>${subject2}</td><td>${totalMarks}</td><td>${obtainedMarks2}</td><td>${percentage2.toFixed(2)}%</td></tr>`);
+document.write(`<tr><td>${subject3}</td><td>${totalMarks}</td><td>${obtainedMarks3}</td><td>${percentage3.toFixed(2)}%</td></tr>`);
+document.write(`<tr><th>Total</th><th>${totalMarks * 3}</th><th>${totalObtainedMarks}</th><th>${percentage.toFixed(2)}%</th></tr>`);
+// document.write(`<tr><td>Percentage</td><td colspan='2'>${percentage.toFixed(2)}%</td></tr>`);
+document.write("</table>");
+    </script>
+</body>
+</html>

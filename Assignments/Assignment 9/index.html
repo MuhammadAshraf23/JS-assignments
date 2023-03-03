@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//         var arr = [];
+//         var student =[
+//             {
+//                 name: "Ashraf"
+//             }
+//         ]
+//         var arrr =["ahmed"]
+//         var arr1 = [1,4,5,8]
+//         var arr =[true,false]
+//         var arr = [2,falsee,kdfj]
+//         var qualifications =["SSC","HSC","BCS","BS","BCOM","MS","MPHIL","PhD"]
+//    console.log("QUALIFICATIONS\n",qualifications)
+
+
+//    var snum =["Ali" ,"Ahmed","Zahid"];
+//    var sscore=[450,380,420];
+//    let percentages =sscore.map(score => (score/500)*100);
+//    for (let i=0;i<snum.lenght; i++){
+//     console.log("snum:",snum[i]);
+//     console.log("sscore:",sscore[i]);
+//     console.log("percentage:",percentages[i]);
+//     console.log();
+    
+//    }
+// Store the names of three students in an array
+let studentNames = ["John", "Miachel", "Tony"];
+
+// Store the scores of these students in another array
+let studentScores = [350, 450, 400];
+
+// Calculate the percentage of each student
+let totalMarks = 500;
+let percentages = [];
+
+for (let i = 0; i < studentScores.length; i++) {
+  percentages.push((studentScores[i] / totalMarks) * 100);
+}
+
+// Display the scores and percentages of each student
+document.write("<table>");
+// document.write("<tr><th>Score of Michael is</th></tr>");
+// document.write("<tr><th>Score of John is </th></tr>");
+// document.write("<tr><th>Score of tony is </th></tr>");
+
+
+
+for (let i = 0; i < studentNames.length; i++) {
+  document.write(`<tr><th>Score of Micheal is ${studentNames[i]}</th><th>${studentScores[i]}.</th><th>Percentage is.${percentages[i]}%</th></tr>`);
+}
+
+document.write("</table>");
+
+    </script>
+</body>
+</html>

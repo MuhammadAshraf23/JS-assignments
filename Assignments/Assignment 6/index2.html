@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Q #5
+  // Take input for the number
+let num = parseInt(prompt("Enter a number to display its multiplication table:"));
+
+// If the user did not enter a number, set num to 5
+if (isNaN(num)) {
+  num = 5;
+}
+
+// Display the multiplication table in HTML format
+document.write(`<h2>Multiplication Table of ${num}</h2>`);
+document.write("<table>");
+for (let i = 1; i <= 10; i++) {
+  document.write(`<tr><td>${num} x ${i} =</td><td>${num * i}</td></tr>`);
+}
+document.write("</table>");
+    </script>
+</body>
+</html>

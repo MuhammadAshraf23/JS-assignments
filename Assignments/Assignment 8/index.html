@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Chapter 12 and 13 
+          Assignment 8--> 
+    <script>
+        //Q # 1
+        let ch = prompt("Enter a number,Upper Case Letter or Lower Case Letter")
+        if (ch >= 1) {
+            document.write("It is a number")
+        }
+        else if (ch >= "A" && ch <= "Z") {
+            document.write("It is an Upper Case Letter")
+        }
+        else if (ch >= "a" && ch <= "z") {
+            document.write("It is a Lower Case Letter")
+        }
+        else {
+            document.write("is not a number, Upper Case letter or Lower Case letter")
+        }
+        //Q # 3
+        let num = prompt("Enter a number")
+        if (num >= 1) {
+            alert("It is a positve number")
+        }
+        else if (num < 0) {
+            alert("It is a negative number")
+        }
+        else {
+            alert("It is Zero Number")
+        }
+        //q# 2
+
+        let num1 = prompt("TO CHECK WHICH NUMBER IS GREATER:\nEnter First Number")
+        let num2 = prompt("Enter Second Number")
+        if (num1 > num2) {
+            alert("First number is larger", num1)
+        }
+        else if (num1 < num2) {
+            alert("Second number is larger", num2)
+        }
+        else if (num1 = num2) {
+            alert("they are equal")
+        }
+        else {
+            alert("Please type number")
+        }
+
+        // q # 4
+        let a = prompt("Enter any Alphabets")
+        if ((a == "a" || a == "e" || a == "i" || a == "o" || a == "u") || (a == "A" || a == "E" || a == "I" || a == "O" || a == "U")) {
+            alert("True")
+        }
+        else {
+            alert("False")
+        }
+        //q # 5
+        let b = prompt("Please enter Your Password")
+        let c = prompt(" Please enter confirm password")
+        if (b == c) {
+            alert("“Correct! The password you entered matches the original password")
+        }
+        else {
+            alert("Incorrect! Password")
+        }
+        //Q#6
+        var hour = 13;
+        if (hour < 18) {
+            greeting = "Good day";
+        }
+        else {
+            greeting = "Good evening";
+        }
+
+        //Q # 7
+        let time = prompt("Enter time in 24 hours clock")
+
+        if (time >= 0000 && time < 1200) {
+            alert("Good morning")
+        }
+        else if (time >= 1200 && time < 1700) {
+            alert("Good Afternoon")
+        }
+        else if (time >= 1700 && time < 2100) {
+            alert("Good Evening")
+        }
+        else if (time >= 2100 && time <= 2359) {
+            alert("Good night")
+        }
+    </script>
+</body>
+
+</html>
