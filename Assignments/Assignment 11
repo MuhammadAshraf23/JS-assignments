@@ -1,1 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //Q1Write a program that takes two user inputs for first and last name using prompt and merge them in a new variable titled fullName. Greet the user using his full name.
+        let firstName=prompt("Enter Your First Name");
+        let lastName=prompt("Enter Your Last Name");
+        let fullName = firstName+lastName;
+        console.log(fullName);
 
+
+  //Q2  Write a program to take a user input about his favorite mobile phone model. Find and display the length of user input in your browser
+         let favourite = prompt("MY favourite Phone is")
+         alert(favourite);
+         alert("length of string is "+favourite.length);
+
+
+//Q3 Write a program to find the index of letter “n” in the word “Pakistani” and display the result in your browser .
+        let Pakis= "Pakistani"
+        let indexx = Pakis.indexOf("n")
+        console.log("String:"+Pakis);
+        console.log("Index of 'n' is:"+indexx)
+
+
+//4. Write a program to find the last index of letter “l” in the word “Hello World” and display the result in your browser.
+        let Hello = "Hello World"
+        let last= Hello.lastIndexOf("l")
+        console.log("String: "+Hello);
+        console.log("Index of 'l' is: "+last)
+
+// Q5 Write a program to find the character at 3rd index in the word “Pakistani” and display the result in your browser.
+        let Pakistan= "Pakistani"
+        let indexFind=Pakistan[3]
+         console.log("String:"+Pakis);
+        console.log("Character at Index of '3' is:"+indexFind)
+
+
+//Q6. Repeat Q1 using string concat() method.
+        let firstName1=prompt("Enter Your First Name");
+        let lastName2=prompt("Enter Your Last Name");
+        let fullName3 =firstName1.concat(lastName2)
+        console.log(fullName3);
+
+
+//Q7. Write a program to replace the “Hyder” to “Islam” in the word “Hyderabad” and display the result in your browser.     
+       let abad = "Hyderabad"
+       let text = abad.replace("Hyder","Islam")
+       console.log("city "+ abad)
+       console.log("After replacement: "+ text)
+
+//Q8. Write a program to replace all occurrences of “and” in the string with “&” and display the result in your browser.
+//var message = “Ali and Sami are best friends. They play cricket and football together.”;
+         let message = "Ali and Sami are best friends. They play cricket and football together"
+         let newmessage = message.replace(/and/g,"&");
+         console.log(newmessage)
+
+//Q9. Write a program that converts a string “472” to a number 472. Display the values & types in your browser.   
+            let strings="472";
+            let number= +strings;
+            console.log("Value: " + strings);
+            console.log("Type: " +typeof(strings));
+            console.log("Value: " + strings);
+            console.log("Typoe: " + typeof(number));
+//Q10Write a program that takes user input. Convert and show the input in capital letters.
+                let usersConvert= prompt("Enter any name to convert into Captalized")
+                console.log(usersConvert.toUpperCase());
+
+
+
+//Q11 Write a program that takes user input. Convert and show the input in title case.                
+                let users= "Enter any name to convert into Captalized"
+                let kaz= users.split(" ");
+                for(i=0;i<kaz.length;i++){
+                        kaz[i]=kaz[i][0].toUpperCase() + kaz[i].slice(1).toLowerCase();  
+                }
+                let newKaz = kaz.join(" ")
+                console.log(newKaz)
+
+
+//Q12 Write a program that converts the variable num to string.var num = 35.36 ; Remove the dot to display “3536” display in your browser.     
+              let Num = 35.36;
+              let string= Num.toString().replace(".","")
+              console.log("Number: "+Num);  
+              console.log("Result: "+string);           
+  //Q 13. Write a program to take user input and store username in a variable. If the username contains any special symbolamong [@ . , !], prompt the user to enter a valid username.For character codes of [@ .
+// ASCII code of ! is 33
+// ASCII code of , is 44
+// ASCII code of . is 46
+// ASCII code of @ is 64
+            let userName =prompt("Enter username")
+           let foundSpecialSymbol= false;
+           for(i=0;i<userName.length;i++){
+                let charCode=userName.charCodeAt(i)
+                if(charCode === 33 || charCode === 44 || charCode === 46 || charCode  === 64){
+                        foundSpecialSymbol=true;
+                        break;
+                }
+           }
+           if(foundSpecialSymbol){
+                alert("please enter a valid username");
+           }
+           else{
+                alert("Its valid username"+ userName);
+           }
+
+ //Q14. You have an array A = [cake”, “apple pie”, “cookie”, “chips”, “patties”] Write a program to enable “search by user input” in anarray. After searching, prompt the user whether the given item is found in the list or not. Perform case insensitive search. Whether the user enters cookie, Cookie, COOKIE or coOkIE, programshould inform about its availability.       
+    
+     let AA= ["cake","apple pie","cookie","chips", "patties"]
+     let userInput =prompt("Welcome to our Bakery")
+     userInput=userInput.toLowerCase()
+     let index=AA.indexOf(userInput)
+     if(index!==-1){
+       alert(userInput+ " is avaible at "+index+" in our bakery")
+     }
+     else{
+        alert(userInput+ " is not avaibale in our bakery");
+     }
+  
+//16. Write a program to convert the following string to anarray using string split method. var university = “University of Karachi”
+    let  university = "University of Karachi"
+    let update= university.split("")
+    for(i=0; i<university.length;i++){
+      
+        console.log(university[i]);
+    }
+
+//Q18. You have a string “The quick brown fox jumps over the lazy dog”. Write a program to count number of occurrences of word “the” in given string.
+    let lazyDog="The quick brown fox jumps over the lazy dog"
+    let lower = lazyDog.toLowerCase()
+    let dog= lower.split(" ")
+    let count=0;
+    for(i=0;i<dog.length;i++){
+        if(dog[i]=="the")
+        count++
+    }
+    console.log("There are "+count+" number of 'the'");
+    
+    
+    
+    </script>
+
+</body>
+</html>
