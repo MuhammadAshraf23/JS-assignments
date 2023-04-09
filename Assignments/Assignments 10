@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //     //Q 1 Declare and initialize an empty multidimensional array.(Array of arrays)
+        let emptyArr=[
+            [],  [],  [],  []
+        ];
+
+    //     //Q 2 Declare and initialize a multidimensional array  representing the following matrix:
+        let multidem = [
+            [0,1,2,3],
+            [1,0,1,2],
+            [2,1,0,1],
+        ];
+     console.log(multidem);
+
+    //  Q 3 Write a program to print numeric counting from 1 to 10.
+      for(var i=1;i<=10;i++){
+        console.log(i)
+       }
+
+      //Q 4  Write a program to print multiplication table of anynumber using for loop. Table number & length should betaken as an input from user.
+      var multiTable = prompt("Enter a number to shows its multiplication Table")
+      var multiTl = prompt("Enter length multiplication Table")
+        document.write("Multiplication Table of " + multiTable +"<br />");
+        document.write("length" + multiTl+"<br />");
+      for(var i=1;i<=multiTl;i++){
+       document.write(multiTable + "*" + i + "=" + i*multiTable +"<br/>");
+      }
+
+      //Q 5 Write a program to print items of the following arrayusing for loop:
+          //  fruits = [“apple”, “banana”, “mango”, “orange”,“strawberry”]
+      var fruits = ["apple","banana","mango","orange","stawberry"];
+       for(var i=0;i<fruits.length;i++){
+        document.write(fruits[i]+"<br>")
+       }
+       for(var j=0;j<fruits.length;j++){
+        document.write("Element at index " + [j]+ " is " + fruits[j] +"<br>");    
+      }
+      //Q 6 Generate the following series in your browser. Seeexample output.
+//       a. Counting: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15
+//       b. Reverse counting: 10, 9, 8, 7, 6, 5, 4, 3, 2, 1
+//       c. Even: 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20
+//       d. Odd: 1, 3, 5, 7, 9, 11, 13, 15, 17, 19
+//       e. Series: 2k, 4k, 6k, 8k, 10k, 12k, 14k, 16k, 18k, 20k
+    
+        let count = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20[
+        "2k","4k","6k","8k","10k","12k","14k","16k","18k","20k"
+      ],]
+      document.write("<br/>")
+      document.write("Counting:")
+      for(i=1;i<=15;i++){
+        document.write(i+",")
+      }
+      for(i=10;i>=1;i--){
+     
+      }
+      document.write("<br/>")
+      document.write("Even:")
+       for(i=1;i<=20;i++){
+       if(i%2==0){
+      document.write(i+",")
+    }
+  }
+  document.write("<br/>")
+  document.write("Odd:")
+       for(i=1;i<=20;i++){
+       if(i%2!==0){
+      document.write(i+",")
+    }
+  }
+  document.write("<br/>")
+  document.write("Series:")
+       for(i=1;i<=20;i++){
+       if(i%2==0){
+      document.write(i+"k,")
+    }
+  }
+
+
+//Q 7You have an arra arry = [“cake”, “apple pie”, “cookie”, “chips”, “patties”]Write a program to enable “search by user input” in anarray.After searching, prompt the user whether the given item isfound in the list or not.
+
+let arry = ["cake", "apple pie", "cookie", "chips", "patties"];
+let user = prompt("Welcome to MyBakery, what do you want sir/madam?");
+let index = arry.indexOf(user);
+if(index !== -1){
+  document.write(user + " is available at index " + index + " in our bakery. <br>");    
+}
+else{
+  document.write("We are sorry! "+user + " is not available in our bakery. <br>");    
+}
+
+//Q 8 9. Write a program to identify the smallest number in the given array.
+
+const arik = [2343,34,5,3,23,93434,563,93]
+let largest=arik[0]
+for(let i=0;i<arik.length; i++){
+  if(arik[i]>largest){
+    largest=arik[i]
+  }
+}
+console.log(largest);
+
+
+//Q 9 Write a program to print multiples of 5 ranging 1 to 100.
+
+
+for(let i=1;i<100;i++){
+  if(i%5==0){
+  console.log(i)
+}
+ }
+
+    </script>
+</body>
+</html>
