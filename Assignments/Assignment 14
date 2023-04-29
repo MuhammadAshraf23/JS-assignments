@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+                                //Q 1. Write a function that displays current date & time in your browser.
+  
+    function currentDate(){
+     console.log(new Date());
+             }    
+            currentDate()          
+                                               //Q2. Write a function that takes first & last name and then it greets the user using his full name
+   let firstName=prompt("Enter your First name: ")
+   let lastName=prompt("Enter your last name: ")
+   function fullName(){
+     console.log("Welcome to"+firstName+lastName);
+   }
+      fullName()
+//                                         // Q3. Write a function that adds two numbers (input by user) and returns the sum of two numbers.
+  function adds(num1,num2){
+     return num1+num2;
+  }
+  let added=  adds(3,4)
+  conle.log(added);
+//                                  //  Q4 Write a function that takes three arguments num1, num2 & operator & compute 
+//                                      // the desired operation. Return and show the desired result in your browser. 
+  
+  function calculator(num1,num2,operator){
+     let result;
+   if(operator=="+"){
+      result= num1+num2
+    }
+    else if(operator=="-"){
+    result=num1-num2
+  }
+   else if(operator=="*"){
+   result=num1*num2
+  }
+   else if(operator=="/"){
+  result=num1/num2
+ }
+ console.log(result);     
+ return result;
+  } 
+ calculator(4,5,"+")  
+ calculator(4,5,"-")     
+ calculator(4,5,"*")   
+ calculator(4,5,"/")   
+ 
+             
+//                                //Q5. Write a function that squares its argument.
+  function squares(num){
+    return num*num
+  }    
+  let answer= squares(5)                      
+  console.log(answer);
+                              // Q6. Write a function that computes factorial of a number.
+   fact=1
+   function factorial(num){
+   for(i=1;i<=num;i++){
+     fact=fact*i
+   }
+   console.log(fact);
+  }    
+   factorial(8)                
+                         
+//                     //Q7. Write a function that take start and end number as inputs & display counting in your browser.
+
+function counting(){
+  let nums1=+prompt("Enter starting number")
+  let nums2=+prompt("Enter ending number")
+for(i=nums1;i<=nums2;i++){
+  console.log(i);
+}
+}
+counting()
+
+//                                             // 8. Write a nested function that computes hypotenuse of a right angle triangle. Hypotenuse2 = Base2 + Perpendicular2
+//                                             // Take base and perpendicular as inputs.
+//                                             // Outer function : calculateHypotenuse()
+//                                             // Inner function: calculateSquare()
+
+function calculateHypotenuse(base,perpendicular){
+  function calculateSquare(num){
+return num*num;
+  }
+  let Hypotenuse2=calculateSquare(base)+calculateSquare(perpendicular)
+  let hypotenuse=Math.sqrt(Hypotenuse2)
+  return hypotenuse
+}        
+let hypotenuse =calculateHypotenuse(3,4)      
+console.log(hypotenuse);                      
+
+                                     
+//                                // 9. Write a function that calculates the area of a rectangle. A = width * height Pass width and height in following manner
+//                               // i. Arguments as value
+//                                // ii. Arguments as variables
+function areaOfRectangle(width,height){
+  A=width*height
+  console.log(A);
+}
+areaOfRectangle(2,3)
+
+
+//                                      // 10. Write a JavaScript function that checks whether a passed string is palindrome or not?A palindrome is word, 
+//                                      //phrase, or sequence that reads the same backward asforward, e.g., madam.
+
+
+function Palindrome(str){
+str =str.tolowerCase().replace(/[^a^a-zA-Z0-9]/g, '')
+var reversed =str.split("").reverse().join("")
+if (str === reversed) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+// example usage
+console.log(Palindrome("racecar")); // true
+console.log(Palindrome("hello")); // false
+console.log(Palindrome("A man, a plan, a canal, Panama!")); // true
+
+
+                                    //Q11. Write a JavaScript function that accepts a string as a parameter and converts the first letter of each word of thestring in upper case.
+                                    // EXAMPLE STRING : 'the quick brown fox'
+                                    // EXPECTED OUTPUT : 'The Quick Brown Fox'
+//let words= "the quick brown fox"
+   function uppercase(words)   {
+ let str =words.split(" ")
+
+     for(let i=0;i<str.length;i++){
+   str[i]=str[i][0].toUpperCase()+str[i].slice(1).toLowerCase()
+          }
+          let result= str.join(' ')
+          console.log(result);
+}    
+uppercase("the quick brown fox")
+                                     //Q12. Write a JavaScript function that accepts a string as parameter and find the longest word within the string.
+                                      // EXAMPLE STRING : 'Web Development Tutorial'
+                                     // EXPECTED OUTPUT : 'Development'
+     
+    
+    function findLongesstWord(strr)   {
+    let wordss= strr.split(" ") 
+    let longestword=wordss[0];    
+    for(i=0;i<wordss.length;i++){
+      let mword=wordss[i]
+      if(mword.length>longestword.length){
+        longestword=mword
+      } 
+    
+    }
+    console.log(longestword);
+  }
+  findLongesstWord("Web And App Development tutorial") 
+
+                                                    //Q13 Write a JavaScript function that accepts two arguments, astring and a letter and the function will count the number of
+                                     //occurrences of the specified letter within the string. Sample arguments : 'JSResourceS.com', 'o'
+  function occurrences(str, letter){
+let count =0;
+for(i=0;i<str.length;i++){
+  if(str.charAt(i)===letter){
+    count++
+    }
+}
+return count;
+    }
+ console.log(occurrences("JSResourceS.com","o")); 
+
+
+                                    // Q14. The Geometrizer
+                                    // Create 2 functions that calculate properties of a circle, using the definitions here.
+                                    // Create a function called calcCircumference:
+                                    // • Pass the radius to the function.
+                                    // • Calculate the circumference based on the radius, and output
+                                    // "The circumference is NN".
+                                    // Create a function called calcArea:
+                                    // • Pass the radius to the function.
+                                    // • Calculate the area based on the radius, and output "The area
+                                    // is NN".
+
+                                    // Circumference of circle = 2πr
+                                    // Area of circle = πr^2
+    function calcCircumference(radius){
+     let circumferenceOfCircle= 2*3.14*radius;
+return circumferenceOfCircle;
+    } 
+    console.log(calcCircumference(9)); 
+    function calcArea(radius){
+     let AreaOfCircle= 3.14*radius**2
+     return AreaOfCircle
+    }
+    console.log(calcArea(9)); 
+
+
+ 
+    </script>
+</body>
+</html>
