@@ -110,7 +110,15 @@ areaOfRectangle(2,3)
 //                                      // 10. Write a JavaScript function that checks whether a passed string is palindrome or not?A palindrome is word, 
 //                                      //phrase, or sequence that reads the same backward asforward, e.g., madam.
 
-
+function findPalindromeWords(palindromeWord){
+let result=palindromeWord.split("").reverse().join("")
+if(palindromeWord==result){
+      console.log("The word ",result, "is Palindrome Word");}
+else{
+console.log("The word",result,"is not Palindrome")   }
+}
+                                 //==========OR==========//
+findPalindromeWords("madam")
 function Palindrome(str){
 str =str.tolowerCase().replace(/[^a^a-zA-Z0-9]/g, '')
 var reversed =str.split("").reverse().join("")
@@ -160,7 +168,7 @@ uppercase("the quick brown fox")
   }
   findLongesstWord("Web And App Development tutorial") 
 
-                                                    //Q13 Write a JavaScript function that accepts two arguments, astring and a letter and the function will count the number of
+                                      //Q13 Write a JavaScript function that accepts two arguments, astring and a letter and the function will count the number of
                                      //occurrences of the specified letter within the string. Sample arguments : 'JSResourceS.com', 'o'
   function occurrences(str, letter){
 let count =0;
